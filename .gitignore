@@ -1,0 +1,7 @@
+.htaccess
+.DS_Store
+/data/etl/parks_h3/*.csv
+/data/etl/*.csv
+*.zip
+*.csv
+*.plt
