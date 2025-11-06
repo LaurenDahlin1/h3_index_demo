@@ -46,7 +46,7 @@ Three notebooks form the pipeline:
 1. **01\_get\_location\_hex\_ids.ipynb**
 
    - Loads park polygons from OpenStreetMap
-   - Picks an H3 resolution
+   - Picks an H3 resolution using the range of polygon sizes
    - Creates H3 hex ids that cover each park (polyfill)
    - Saves park hex tables for joins later
    - View Public Notebook in Colab: [Link](https://colab.research.google.com/drive/1rZvssFyjJnlvEtnUJRQuDkRv2JN5mLD7?usp=sharing)
