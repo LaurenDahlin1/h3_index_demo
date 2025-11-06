@@ -48,6 +48,7 @@ Three notebooks form the pipeline:
    - Loads park polygons from OpenStreetMap
    - Picks an H3 resolution using the range of polygon sizes
    - Creates H3 hex ids that cover each park (polyfill)
+   - Calculates the overlap of the hex id area with the park polygon, discarding hexes with small overlap
    - Saves park hex tables for joins later
    - View Public Notebook in Colab: [Link](https://colab.research.google.com/drive/1rZvssFyjJnlvEtnUJRQuDkRv2JN5mLD7?usp=sharing)
 
@@ -95,10 +96,10 @@ If Colab asks for Drive access, grant permission so the notebooks can read and w
 ## Ideas for future work
 
 - Test several H3 resolutions and report sensitivity
-- Use probabilistic point in polygon with GPS accuracy
-- Add speed and heading to detect stays more robustly
+- Model error using Monte Carlo methods using the hexagon overlap of the error
+- Create additional indices that use length of visit (time used) and geographic diversity of users
 - Compare parks by time of day and day of week
-- Move the pipeline to Spark for very large datasets
+- Move the pipeline to Spark or Databricks
 
 ---
 
