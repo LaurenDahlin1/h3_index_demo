@@ -1,6 +1,6 @@
 # H3 Index Demo
 
-A simple demo that uses the Uber H3 grid with high frequency GPS data. The goal is to build an index that reflects the usage of Beijing parks among users in the Microsoft Geolife dataset. Park boundaries come from OpenStreetMap.
+A simple demo that uses the Uber H3 grid with high frequency GPS data. The goal is to build an index that reflects the usage of Beijing parks among users in the [Microsoft Geolife dataset](https://www.microsoft.com/en-us/download/details.aspx?id=52367). Park boundaries come from OpenStreetMap.
 
 ![Map of H3 Index for Geolife Park Visits](img/map_parks_geolife_h3_index.png)
 
@@ -16,7 +16,7 @@ A simple demo that uses the Uber H3 grid with high frequency GPS data. The goal 
 
 ## What is H3
 
-H3 is a global grid system made of hexagons. It assigns every location on Earth to a hex id. Each level of detail is called a resolution. Low resolutions have big hexes. High resolutions have small hexes.
+H3 is a global grid system made of hexagons. It assigns every location on Earth to a hex id. Each level of detail is called a resolution. Low resolutions have big hexes. High resolutions have small hexes. See the [H3 documentation](https://h3geo.org/docs/core-library/restable#appendix-methodology) for more details.
 
 Choosing the right resolution matters. If the hex is too big, you lose detail. If the hex is too small, the data gets sparse and noisy. In a real project you would test several resolutions and see how sensitive the analysis is to the choice of index.
 
@@ -96,7 +96,7 @@ If Colab asks for Drive access, grant permission so the notebooks can read and w
 ## Ideas for future work
 
 - Test several H3 resolutions and report sensitivity
-- Model error using Monte Carlo methods using the hexagon overlap of the error
+- Model error of probability the user is in the park using Monte Carlo methods using the hexagon overlap
 - Create additional indices that use length of visit (time used) and geographic diversity of users
 - Compare parks by time of day and day of week
 - Move the pipeline to Spark or Databricks
